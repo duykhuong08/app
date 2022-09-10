@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:background="#FF9966">
+
+   <androidx.drawerlayout.widget.DrawerLayout
+       android:id="@+id/DrawerLayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <androidx.appcompat.widget.Toolbar
+               android:id="@+id/toolbarmanhinhchinh"
+               android:background="#FF5722"
+               app:title="Home"
+               app:titleTextColor="@color/white"
+               android:layout_width="match_parent"
+               android:layout_height="?attr/actionBarSize">
+
+           </androidx.appcompat.widget.Toolbar>
+           <ViewFlipper
+               android:id="@+id/viewflipper"
+               android:layout_width="match_parent"
+               android:layout_height="200dp">
+
+           </ViewFlipper>
+           <LinearLayout
+               android:background="#FF5722"
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/sanphammoi"
+                   android:background="#FF5722"
+                    android:text="New Products"
+                   android:textColor="@color/white"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+               </TextView>
+
+           </LinearLayout>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recycle_view_foods"
+               android:layout_width="match_parent"
+               android:layout_height="270dp"
+               android:layout_marginLeft="5dp"
+               android:layout_marginTop="5dp"
+               android:layout_marginRight="5dp"
+              >
+
+           </androidx.recyclerview.widget.RecyclerView>
+
+       </LinearLayout>
+       <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+           xmlns:app="http://schemas.android.com/apk/res-auto"
+           xmlns:tools="http://schemas.android.com/tools"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           tools:context=".activity.MainActivity">
+
+           <com.google.android.material.bottomnavigation.BottomNavigationView
+
+               android:id="@+id/bottom_nav"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:background="#ff5722"
+               app:itemTextColor="@drawable/selector"
+               app:itemIconTint="@drawable/selector"
+               app:labelVisibilityMode="labeled"
+               app:menu="@menu/bottom_navigation" />
+       </RelativeLayout>
+   </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>
